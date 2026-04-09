@@ -1,0 +1,289 @@
+
+@font-face
+{
+    font-family:alice;
+    src:url(./assets/astroz/Astroz\ Trial.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.hero{
+    height: 100vh; 
+    /* veiw/visual height using vh instead 
+    0f 100% it will cover entire section while scrolling*/
+    width: 100%;
+    position: relative;
+}
+.nav{
+background-color: #ebe7e7;
+width: 70%;
+display: flex;
+padding: 12px;
+border-radius: 10px;
+margin-left: 15%;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+ top: 10px;
+ z-index: 3;
+
+}
+.logo{
+    font-family: alice;
+}
+.navbutton{
+    display: flex;
+    gap: 20px;
+}
+.browser{
+padding: 10px 15px;/* first-top& bottom,second-left&right*/
+border-radius:4px ;
+border: 0;
+text-transform: capitalize;
+background-color: #ed12ed;
+color: #3407ba;
+}
+.orders{
+padding: 10px;
+border-radius: 4px;
+background:#000;
+color: #dbd0d0;
+}
+
+.video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+}
+.video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+.heromid{
+    position: absolute;
+    z-index: 5;
+    
+    top: 50%;
+    left: 10%;
+    
+}
+.midtext{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom:10px ;
+}
+.midhead{
+
+    font-size: 70px;
+    font-family: alice;
+    color: blueviolet;
+}
+.herofooter{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    text-align: right;
+
+}
+.foottext{
+    font-size: 17px;
+    color: #787575;
+    margin-bottom: 20px;
+
+}
+.footbutton{
+    padding: 20px 30px;
+    background:#ffffff;
+    border: 1px solid #434343;
+    border-radius: 20px;
+
+}
+
+.featurehead
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 70px 0px;
+    background-color: antiquewhite;
+}
+.featureheading{
+    font-family: alice;
+    font-size: 50px;
+}
+.featurepara
+{
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+    color: #434343;
+    
+}
+
+
+.charactercard{
+    background: #3f08e6;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+
+}
+.characterimg{
+    height: 300px;
+    position: absolute;
+    top: -30px;
+}
+.cardtext{
+    position: absolute;
+    bottom:10px;
+}
+.cardname{
+    font-family: alice;
+    font-size: 20px;
+    color:bisque;
+}
+.cardtag
+{
+    display: flex;
+    font-size: 10px;
+
+}
+.cardbutton
+{
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: #000;
+    background: greenyellow;
+}
+.cardtotal{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 50px;
+}
+.topcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.bottomcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+
+footer {
+  background: #d07171;
+  color: #fff;
+  padding: 20px;
+
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* Popup background */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;          /* cover full screen */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+/* Popup box */
+.popup-content {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  width: 320px;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: move;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.highlight {
+  animation: highlightEffect 1.5s ease;
+}
+
+@keyframes highlightEffect {
+  0% {
+    transform: scale(2);
+    border: 0px solid transparent;
+    background-color: transparent;
+  }
+
+  30% {
+    transform: scale(1);
+    border: 4px solid #16c633;
+    background-color: rgba(190, 12, 239, 0.778);
+  }
+
+  60% {
+    transform: scale(1);
+    border: 3px solid #00ffff;
+  }
+
+  100% {
+    transform: scale(1);
+    border: 0px solid transparent;
+    background-color: transparent;
+  }
+}
+
+.about-section {
+  padding: 80px 20px;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  max-width: 600px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
