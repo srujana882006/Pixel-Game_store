@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store of Pixel Legend</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="hero">
+        <div class="herovideo">
+            <video class="video" src="./assets/Whisk_ktm5ymzzq2mwgzyl1cnlldotegolrtlkvgn40so.webm" autoplay muted loop></video>
+        
+        </div>
+        <nav class="nav">
+            <h1 class="logo">Pixel Legends</h1>
+            <div class="navbutton">
+                <button class="browser" onclick="scrollToCharacters()">Browser</button>
+                <button class="orders" onclick="loadOrders()">Orders</button> 
+            </div>
+        </nav>
+        <div class="heromid">
+            <p class="midtext">/\The ultimate collector</p>
+            <h1 class="midhead">collect <br>
+                legendary <br>
+            character</h1>
+        </div>
+        <div class="herofooter">
+            <p class="foottext">choose your warrior.build your squad. <br>
+            conqure your area.
+            </p>
+            <button class="footbutton">
+                Browse character!
+            </button>
+        </div>
+    </div>
+
+
+    
+    <div class="featurehead">
+        <h1 class="featureheading">EVERY LEGEND HAS A STORY</h1>
+        <p class="featurepara">
+             Every legend has a story.<br>
+              It begins with a dream, grows through challenges, 
+              and shines through determination.<br>
+               No success comes overnight — it is built step by step, 
+               moment by moment. Your journey matters, because one day,
+                it could inspire the world.
+        </p>
+    </div>
+
+
+
+<div id="characters" class="charactersection" style="background-color:rgb(242, 241, 234);">
+
+    <div class="featurehead" style="background-color:rgb(223, 231, 231);">
+        <h1 class="featureheading">Choose your Fighter</h1>
+        <p class="featurepara">5 legendaray characters,each with
+            unique powers
+        </p>
+    </div>
+
+ <div class="cardtotal">
+ 
+       <div class="topcard">
+
+     <div class="charactercard">
+        <img src="./assets/background-remover/Whisk_0988bec7832708da9ba41e3fd34b1277dr (1).png" alt="" class="characterimg">
+        <div class="cardtext">
+        <h1 class="cardname">Iron Man</h1>
+<div class="cardtag">
+    <p>Pixel Legends</p>
+    <p>.Tank</p>
+</div>
+<button class="cardbutton" onclick="orderCharacter('Iron Man')">Get it</button>
+    </div>
+    </div>
+    
+
+
+
+     <div class="charactercard" style="background-color: rgb(205, 50, 184);">
+        <img src="./assets/background-remover/Whisk_73673ecf4a3e08e9f444171255797687dr (1).png" alt="" class="characterimg">
+        <div class="cardtext">
+        <h1 class="cardname">Lady Boss</h1>
+<div class="cardtag">
+    <p>Pixel Legends</p>
+    <p>.Tank</p>
+</div>
+<button class="cardbutton" onclick="orderCharacter('Lady Boss')">Get it</button>
+    </div>
+    </div>
+    
+
+
+
+
+     <div class="charactercard" style="background-color: brown;">
+        <img src="./assets/background-remover/Whisk_7776c230ca6a12da8804831e281bf35edr (1).png" alt="" class="characterimg">
+        <div class="cardtext">
+        <h1 class="cardname">Bear Boy</h1>
+<div class="cardtag">
+    <p>Pixel Legends</p>
+    <p>.Tank</p>
+</div>
+<button class="cardbutton" onclick="orderCharacter('Bear Boy')">Get it</button>
+    </div>
+    </div>
+
+          </div>
+
+          <div class="bottomcard">
+
+ <div class="charactercard" style="background-color: goldenrod;">
+        <img src="./assets/background-remover/Whisk_7add25da8903fcd9d004780109c6d487dr (1).png" alt="" class="characterimg">
+        <div class="cardtext">
+        <h1 class="cardname">Gold Queen</h1>
+<div class="cardtag">
+    <p>Pixel Legends</p>
+    <p>.Tank</p>
+</div>
+<button class="cardbutton" onclick="orderCharacter('Gold Queen')">Get it</button>
+    </div>
+    </div>
+
+
+
+
+    <div class="charactercard" style="background-color:blueviolet;">
+        <img class="characterimg" src="./assets/background-remover/Whisk_7fbacb49e24966e98f2499bd4cd5d15ddr (1).png" alt="">
+       <div class="cardtext">
+        <h1 class="cardname">Arrow Girl</h1>
+<div class="cardtag">
+    <p>Pixel Legends</p>
+    <p>.Tank</p>
+</div>
+
+<button class="cardbutton" onclick="orderCharacter('Arrow Girl')">Get it</button>
+    </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+
+    <h2>Your Orders</h2>
+    <div id="ordersList"></div>
+
+    <button onclick="clearOrders()" style="margin-top:10px;">
+      Clear Orders
+    </button>
+  </div>
+</div>
+
+<div id="detailPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeDetailPopup()">&times;</span>
+
+    <img id="charImg" width="100%" style="border-radius:10px; margin-bottom:10px;">
+
+    <h2 id="charName"></h2>
+    <p id="charAbout"></p>
+    <h3 id="charPrice"></h3>
+
+    <!-- 👉 Buttons -->
+    <div style="margin-top:15px; display:flex; justify-content:space-between;">
+      <button onclick="cancelOrder()">Cancel</button>
+      <button onclick="confirmOrder()">Get it</button>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+<br>
+<footer>
+  <div class="footer-container">
+    <p>© 2026 Pixel Legend</p>
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#" onclick="openAboutPopup(); return false;">About</a>
+      <a href="#" onclick="openContactPopup(); return false;">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div id="aboutPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeAboutPopup()">&times;</span>
+
+    <h2>About Pixel Legends</h2>
+
+    <p>
+      Pixel Legends is a world of powerful warriors, each with unique abilities and stories.
+    </p>
+
+    <p>
+      From fearless leaders to magical queens, every character is designed to bring strategy,
+      action, and excitement.
+    </p>
+
+    <p>
+      Choose your fighter, build your squad, and conquer your world.
+      Every legend has a story — now it's yours.
+    </p>
+
+  </div>
+</div>
+
+
+<div id="contactPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeContactPopup()">&times;</span>
+
+    <h2>Contact Us</h2>
+
+    <p>📧 Email: midupalasrujana@gmail.com</p>
+    <p>📞 Phone: +91 9391455982</p>
+    <p>📍 Location: Telangana,Mancherial,India</p>
+
+    <p style="margin-top:10px;">
+      Feel free to reach out for collaborations, support, or feedback!
+    </p>
+  </div>
+</div>
+    
+</body>
+</html>
